@@ -3,6 +3,10 @@ package ReferencesProject.MODULES.BASE_COMPONENTS.Controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 
 import ReferencesProject.MODULES.BASE_COMPONENTS.ServicesImplemetation.BaseServiceImplementation;
 
@@ -12,7 +16,9 @@ public class BaseControllerImplementation<Entity, Service extends BaseServiceImp
     @Autowired
     protected Service Servicio;
 
+    @GetMapping("/GetAll")
     @Override
+
     public ResponseEntity<?> GetAll() {
         try {
             return ResponseEntity.status(HttpStatus.OK).body(this.Servicio.FindAll());
@@ -22,6 +28,7 @@ public class BaseControllerImplementation<Entity, Service extends BaseServiceImp
         }
     }
 
+    @GetMapping("/GetOne/{Id}")
     @Override
     public ResponseEntity<?> GetOne(Long Id) {
         try {
@@ -32,6 +39,7 @@ public class BaseControllerImplementation<Entity, Service extends BaseServiceImp
         }
     }
 
+    @PostMapping("/Save")
     @Override
     public ResponseEntity<?> Save(Entity Entity) {
         try {
@@ -42,6 +50,7 @@ public class BaseControllerImplementation<Entity, Service extends BaseServiceImp
         }
     }
 
+    @PutMapping("/Update/{Id}")
     @Override
     public ResponseEntity<?> Update(Long Id, Entity Entity) {
         try {
@@ -52,6 +61,7 @@ public class BaseControllerImplementation<Entity, Service extends BaseServiceImp
         }
     }
 
+    @DeleteMapping("/Delete/{Id}")
     @Override
     public ResponseEntity<?> Delete(Long Id) {
         try {
