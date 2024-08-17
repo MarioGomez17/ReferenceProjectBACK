@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "CylinderCapacity")
+@Table(name = "Cylinder_Capacity")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter

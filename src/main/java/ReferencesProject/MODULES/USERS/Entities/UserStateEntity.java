@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "\"UserState\"")
+@Table(name = "\"User_State\"")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
