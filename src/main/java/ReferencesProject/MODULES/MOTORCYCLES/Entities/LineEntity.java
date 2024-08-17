@@ -25,7 +25,7 @@ public class LineEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id_Line")
-    private Long id;
+    private Long idLine;
 
     @Column(name = "Name_Line")
     @Nonnull

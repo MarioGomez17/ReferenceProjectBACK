@@ -23,7 +23,7 @@ public class CylinderCapacityEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "Id_CylinderCapacity")
-    private Long id;
+    private Long idCylinderCapacity;
 
     @Column(name = "value_CylinderCapacity")
     @Nonnull
